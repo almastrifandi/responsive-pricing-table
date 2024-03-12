@@ -1,0 +1,113 @@
+:root {
+  --background: #55423d;
+  --headline: #fffffe;
+  --container: #271c19;
+  --price: #ffc0ad;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--container);
+  display: flex;
+  justify-content: center;
+  height: 99vh;
+}
+
+.panel-pricing {
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px 25px;
+  max-width: 960px;
+  display: flex;
+  background-color: var(--background);
+  flex-direction: row;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pricing-plan {
+  padding: 15px 25px;
+  border-right: 1px solid var(--headline);
+}
+
+.pricing-plan:last-child {
+  border: none;
+}
+
+.pricing-plan img {
+  width: 95%;
+  margin-bottom: 5px;
+}
+
+.pricing-header {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  color: var(--headline);
+  letter-spacing: 2px;
+}
+
+.pricing-features {
+  color: var(--headline);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.pricing-features-items {
+  border-top: 1px solid var(--headline);
+  padding-top: 15px;
+}
+
+.pricing-features-items:last-child {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--headline);
+}
+.pricing-price {
+  font-size: 2rem;
+  display: block;
+  font-weight: 700;
+
+  color: var(--price);
+}
+
+.pricing-plan a {
+  text-decoration: none;
+  padding: 15px 35px;
+  border: 1px solid var(--headline);
+  margin-top: 25px;
+  display: inline-block;
+  border-radius: 5px;
+  color: var(--headline);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: auto;
+  }
+  .panel-pricing {
+    flex-direction: column;
+    align-items: center; /* Tambahkan ini agar elemen tetap terpusat */
+  }
+
+  .pricing-plan {
+    border-right: none; /* Hapus border kanan pada setiap pricing-plan */
+    margin-bottom: 20px; /* Tambahkan margin bottom agar pricing-plan terpisah */
+    margin-top: 20px; /* Tambahkan margin top agar elemen tidak nembus ke atas */
+    border-bottom: 1px solid var(--headline);
+    padding-bottom: 50px;
+  }
+
+  .pricing-header {
+    margin-top: 0; /* Atur margin top header menjadi 0 */
+  }
+  .pricing-plan img {
+    width: 90%; /* Ubah lebar gambar agar tetap muat di layar kecil */
+    margin-bottom: 10px; /* Ubah margin bottom agar tetap ada jarak antar gambar */
+  }
+}
